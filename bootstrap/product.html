@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link href="./css/non-responsive.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="/css/style.css" rel="stylesheet" />
+<style type="text/css">
+    body{
+    margin: 0;
+    font-family:Nunito Sans;
+    }
+    h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+    }
+    a{
+    text-decoration: none;
+    }
+    .gallery1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    }
+    .contents{
+    width: 31%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius:10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: .4s;
+    }
+    .contents:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transform: translate(0px, -8px);
+    transition: .6s;
+    }
+    img{
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    }
+    p{
+    text-align: center;
+    color: #b2bec3;
+    padding: 0 8px;
+    }
+    h6{
+    font-size: 26px;
+    text-align: center;
+    color: #222f3e;
+    margin: 0;
+    }
+    .fa{
+    color: #ff9f43;
+    font-size: 26px;
+    transition: .4s;
+    }
+    .fa:hover{
+    transform: scale(1.3);
+    transition: .6s;
+    }
+    button{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border:0px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    }
+
+    .buy-1{
+    background-color: #2183a2;
+    }
+    .buy-2{
+    background-color: #3b3e6e;
+    }
+    .buy-3{
+    background-color: #0b0b0b;
+    }
+    @media(max-width: 1000px){
+    .content{
+    width: 46%;
+    }
+    }
+    @media(max-width: 750px){
+    .content{
+    width: 100%;
+    }
+    }
+  </style>
+</head>
+<body>
+
+    <div th:fragment="navbar">
+		<div class="page-top"
+			style="width: 100%; height: 20px; background-color: white;"></div>
+		<!-- Static navbar -->
+		<nav class="navbar navbar-default navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">SHOPIFY</a>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">PRODUCTS <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"> All Products</a></li>
+								<li><a href="#">Store hours &#38; Directions</a></li>
+								<li><a href="#">FAQ</a></li>
+
+							</ul></li>
+						<form class="navbar-form">
+							<div class="form-group">
+								<input type="text" name="keyword" class="form-control"
+									placeholder="Search products" />
+							</div>
+							<button1 type="submit" class="btn btn-default">Search</button>
+						</form>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">SHOPPING CART</a></li>
+						<li><a href="#">MY ACCOUNT</a></li>
+						<li><a href="#">LOGOUT</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+			<!--/.container-fluid -->
+		</nav>
+	</div>
+	
+	<div th:fragment="body-bottom-scripts">
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="jquery.js"></script>
+	</div>
+
+    <div class="gallery">
+        
+          <div class="contents">
+            <img src="iphone.jpg">
+            <h3><b>APPLE iPhone 14(Midnight,128 GB)</b></h3>
+            <p>128 GB ROM
+                15.49 cm (6.1 inch) Super Retina XDR Display
+                12MP + 12MP | 12MP Front Camera</p>
+            <h6>RS.78,999/-</h6>
+            <button class="buy-3">Add to Cart</button>
+          </div>
+          <div class="contents">
+            <img src="headphone.jpg">
+            <h3><b>Headphones with Mic</b></h3>
+            <p>Playback- It provides a massive battery backup of upto 15 hours for a superior playback time. </p><br>
+            <br>
+            <h6>RS.1,499/-</h6>
+            <button class="buy-3">Add to Cart</button>
+          </div>
+          <div class="contents">
+            <img src="shoes.jpg">
+            <h3><b>NIKE Shoes For Men  (Black)</b></h3>
+            <p> NK Revolution 6 Next Nature Men's Road Running Shoes</p><br>
+            <br>
+            <br>
+            <h6>RS.1,999/-</h6>
+            <button class="buy-3">Add to Cart</button>
+          </div>
+        <div class="contents">
+            <img src="sunglass.jpg">
+            <h3><b> Sunglasses</b></h3>
+            <p>This product is sold as Medium by the Brand for
+                Men & Women.  Purpose of Biking, Driving, Eye Protection, Running, Style.</p><br>
+            <h6>RS.499/-</h6>
+            
+            <button class="buy-3">Add to Cart</button>
+          </div>
+          <div class="contents">
+            <img src="shirt.jpg">
+            <h3><b>T-Shirt</b></h3>
+            <p>  Patchwork Slim Fit Men Round Neck White T-Shirt</p><br>
+            <br>
+            <h6>RS.699/-</h6>
+            
+            <button class="buy-3">Add to Cart</button>
+          </div>
+          <div class="contents">
+            <img src="watch.png">
+            <h3><b>Watch</b></h3>
+            <p> Take calls and reply to texts right from your wrist
+                Track your daily activity on Apple Watch and see your trends in the Fitness app on iPhone</p>
+            <h6>RS.50,000/-</h6>
+            <button class="buy-3">Add to Cart</button>
+          </div>
+      </div>
+</body>
+</html>
